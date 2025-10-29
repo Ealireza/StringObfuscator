@@ -7,7 +7,7 @@ import com.obfuscate.annotation.StringObfuscate
  */
 @StringObfuscate
 object AppSecrets {
-    const val DATABASE_PASSWORD = "SuperSecretDBPass123!"
-    const val JWT_SECRET = "jwt_signing_key_very_secret_2024"
-    const val FIREBASE_KEY = "AIzaSyD1234567890abcdefghijklmnop"
+    const val DATABASE_PASSWORD = "example_db_password_replace_me"
+    const val JWT_SECRET = "example_jwt_secret_replace_me"
+    const val FIREBASE_KEY = "example_firebase_key_replace_me"
 }

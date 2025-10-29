@@ -5,7 +5,7 @@ import com.obfuscate.annotation.StringObfuscate
 // ✅ Works on OBJECT
 @StringObfuscate
 object ApiConfig {
-    const val API_KEY = "sk_live_1234567890"
+    const val API_KEY = "example_api_key_123"
     const val BASE_URL = "https://api.example.com"
 }
 
@@ -13,8 +13,8 @@ object ApiConfig {
 @StringObfuscate
 class UserCredentials {
     val username = "admin@example.com"
-    val password = "SuperSecret123!"
-    val token = "jwt_token_abc123xyz"
+    val password = "example_password_123"
+    val token = "example_token_abc123"
 }
 
 // ✅ Works on DATA CLASS
@@ -22,7 +22,7 @@ class UserCredentials {
 data class DatabaseConfig(
     val host: String = "db.example.com",
     val username: String = "db_user",
-    val password: String = "db_password_123",
+    val password: String = "example_db_pass",
     val database: String = "production_db"
 )
 

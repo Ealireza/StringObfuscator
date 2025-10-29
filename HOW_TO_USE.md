@@ -31,9 +31,9 @@ plugins {
 }
 
 dependencies {
-    implementation("com.github.Ealireza.StringObfuscator:annotation:1.0.0")
-    implementation("com.github.Ealireza.StringObfuscator:runtime:1.0.0")
-    ksp("com.github.Ealireza.StringObfuscator:processor:1.0.0")
+    implementation("com.github.Ealireza:annotation:1.0.0")
+    implementation("com.github.Ealireza:runtime:1.0.0")
+    ksp("com.github.Ealireza:processor:1.0.0")
 }
 ```
 
@@ -63,8 +63,8 @@ val apiKey = ApiConfigObfuscated.getApiKey()
 ```kotlin
 @StringObfuscate
 object ApiKeys {
-    const val STRIPE = "pk_live_123..."
-    const val FIREBASE = "AIzaSyD..."
+    const val STRIPE = "example_stripe_key_replace_me..."
+    const val FIREBASE = "example_firebase_key_replace_me..."
 }
 
 // Usage

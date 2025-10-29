@@ -162,7 +162,7 @@ val oauth = OAuthClient(
 ```kotlin
 @StringObfuscate
 object SdkKeys {
-    const val GOOGLE_MAPS = "AIzaSyD_123456..."
+    const val GOOGLE_MAPS = "example_firebase_key_replace_me..."
     const val FIREBASE = "firebase_key_123..."
     const val FACEBOOK_APP_ID = "123456789012345"
 }

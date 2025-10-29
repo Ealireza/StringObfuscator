@@ -71,9 +71,9 @@ plugins {
 
 dependencies {
     // String Obfuscator
-    implementation("com.github.Ealireza.StringObfuscator:annotation:1.0.0")
-    implementation("com.github.Ealireza.StringObfuscator:runtime:1.0.0")
-    ksp("com.github.Ealireza.StringObfuscator:processor:1.0.0")
+    implementation("com.github.Ealireza.StringObfuscate:annotation:1.0.0")
+    implementation("com.github.Ealireza.StringObfuscate:runtime:1.0.0")
+    ksp("com.github.Ealireza.StringObfuscate:processor:1.0.0")
 }
 ```
 
@@ -90,8 +90,8 @@ import com.obfuscate.annotation.StringObfuscate
 
 @StringObfuscate
 object ApiConfig {
-    const val API_KEY = "sk_live_1234567890abcdefghijklmnop"
-    const val API_SECRET = "secret_key_abc123_super_sensitive"
+    const val API_KEY = "your_api_key_here_example_12345"
+    const val API_SECRET = "your_secret_key_here_example_xyz"
     const val BASE_URL = "https://api.example.com/v2"
 }
 ```

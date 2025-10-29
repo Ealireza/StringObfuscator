@@ -9,8 +9,8 @@ import com.obfuscate.annotation.StringObfuscate
 
 @StringObfuscate
 object ApiKeys {
-    const val STRIPE_KEY = "pk_live_51234567890abcdef"
-    const val FIREBASE_KEY = "AIzaSyD1234567890abcdefghij"
+    const val STRIPE_KEY = "example_stripe_key_replace_me"
+    const val FIREBASE_KEY = "example_firebase_key_replace_me"
     const val AWS_SECRET = "aws_secret_key_abc123xyz"
 }
 ```
@@ -151,7 +151,7 @@ cipher.init(Cipher.ENCRYPT_MODE, secretKey, iv)
 ```kotlin
 @StringObfuscate
 object SdkKeys {
-    const val GOOGLE_MAPS_KEY = "AIzaSyD_maps_key_123456"
+    const val GOOGLE_MAPS_KEY = "example_firebase_key_replace_me"
     const val FACEBOOK_APP_ID = "123456789012345"
     const val TWITTER_API_KEY = "twitter_api_key_abc"
     const val ANALYTICS_KEY = "analytics_key_xyz"
