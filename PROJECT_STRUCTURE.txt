@@ -1,0 +1,56 @@
+String Obfuscator - Complete Project Structure
+===============================================
+
+📦 MODULES
+├── annotation/           - @StringObfuscate annotation
+├── processor/           - KSP processor (code generator)
+├── runtime/             - Deobfuscation utilities
+└── sample/              - Example Android app
+
+📚 DOCUMENTATION
+├── README.md            - Main documentation (9.9K)
+├── HOW_TO_USE.md        - Quick 3-step guide (1.9K)
+├── GETTING_STARTED.md   - Detailed setup (5.6K)
+├── QUICK_REFERENCE.md   - Cheat sheet (4.0K)
+├── JITPACK_SETUP.md     - JitPack publishing (5.1K)
+├── CHANGELOG.md         - Version history (3.4K)
+├── CONTRIBUTING.md      - Contribution guide (3.5K)
+├── SECURITY.md          - Security policy (6.2K)
+├── LICENSE              - MIT License
+└── docs/
+    └── USAGE_EXAMPLE.md - Comprehensive examples
+
+🔧 CONFIGURATION
+├── build.gradle.kts     - Root build config (JitPack ready)
+├── settings.gradle.kts  - Project settings
+├── gradle.properties    - Gradle properties
+├── jitpack.yml          - JitPack build config
+└── .gitignore           - Git ignore rules
+
+🤖 GITHUB
+├── .github/
+│   ├── workflows/
+│   │   ├── build.yml    - CI/CD build & test
+│   │   └── release.yml  - Automated releases
+│   └── ISSUE_TEMPLATE/
+│       ├── bug_report.md
+│       └── feature_request.md
+
+🚀 JITPACK READY
+✅ Maven-publish configured
+✅ Group ID: com.github.Ealireza
+✅ Artifact IDs:
+   - stringobfuscator-annotation
+   - stringobfuscator-processor
+   - stringobfuscator-runtime
+
+📦 INSTALLATION (via JitPack)
+implementation("com.github.Ealireza.StringObfuscator:annotation:1.0.0")
+implementation("com.github.Ealireza.StringObfuscator:runtime:1.0.0")
+ksp("com.github.Ealireza.StringObfuscator:processor:1.0.0")
+
+🔗 LINKS
+GitHub: https://github.com/Ealireza/StringObfuscator
+JitPack: https://jitpack.io/#Ealireza/StringObfuscator
+
+✨ READY FOR GITHUB!
