@@ -71,9 +71,9 @@ plugins {
 
 dependencies {
     // String Obfuscator
-    implementation("com.github.Ealireza.StringObfuscate:annotation:1.0.0")
-    implementation("com.github.Ealireza.StringObfuscate:runtime:1.0.0")
-    ksp("com.github.Ealireza.StringObfuscate:processor:1.0.0")
+    implementation("com.github.Ealireza.StringObfuscator:annotation:1.0.0")
+    implementation("com.github.Ealireza.StringObfuscator:runtime:1.0.0")
+    ksp("com.github.Ealireza.StringObfuscator:processor:1.0.0")
 }
 ```
 
@@ -128,8 +128,8 @@ class MainActivity : AppCompatActivity() {
 
 ```mermaid
 graph LR
-    A[Source Code] -->|@StringObfuscate| B[KSP Processor]
-    B -->|XOR + Shuffle| C[Obfuscated Bytes]
+    A[Source Code] -->|Annotation| B[KSP Processor]
+    B -->|XOR and Shuffle| C[Obfuscated Bytes]
     C -->|Base64| D[Generated Code]
     D -->|Runtime| E[Fast Deobfuscation]
     E -->|Inline| F[Original String]

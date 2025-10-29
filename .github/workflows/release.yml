@@ -19,13 +19,12 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
 
     - name: Build release artifacts
-      run: ./gradlew build :sample:assembleRelease --stacktrace
+      run: gradle build :sample:assembleRelease --stacktrace
 
     - name: Get version from tag
       id: get_version
@@ -48,9 +47,15 @@ jobs:
           - Multi-layer security (XOR + Bit Shuffle + Base64)
 
           ### Installation
-          See [README.md](https://github.com/${{ github.repository }}/blob/main/README.md) for installation instructions.
+          ```gradle
+          implementation("com.github.Ealireza.StringObfuscator:annotation:${{ steps.get_version.outputs.VERSION }}")
+          implementation("com.github.Ealireza.StringObfuscator:runtime:${{ steps.get_version.outputs.VERSION }}")
+          ksp("com.github.Ealireza.StringObfuscator:processor:${{ steps.get_version.outputs.VERSION }}")
+          ```
+
+          See [README.md](https://github.com/${{ github.repository }}/blob/main/README.md) for full installation instructions.
 
           ### Changes
-          See commit history for details.
+          See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for details.
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
