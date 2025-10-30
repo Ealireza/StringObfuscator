@@ -19,14 +19,24 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("StringObfuscate", "\n=== Obfuscated (Runtime) Values ===")
         // After KSP processes, you'll use:
-        // ApiConfigObfuscated.getApiKey()
-        // ApiConfigObfuscated.getApiSecret()
-        // ApiConfigObfuscated.getBaseUrl()
-        // ApiConfigObfuscated.getEncryptionKey()
+        val apiKey = ApiConfigObfuscated.getApiKey()
+        val apiSecret = ApiConfigObfuscated.getApiSecret()
+        val baseUrl = ApiConfigObfuscated.getBaseUrl()
 
-        // AppSecretsObfuscated.getDatabasePassword()
-        // AppSecretsObfuscated.getJwtSecret()
-        // AppSecretsObfuscated.getFirebaseKey()
+        Log.d("StringObfuscate", "Obfuscated API Key: $apiKey")
+        Log.d("StringObfuscate", "Obfuscated API Secret: $apiSecret")
+        Log.d("StringObfuscate", "Obfuscated Base URL: $baseUrl")
+
+        // Method call examples (currently not auto-obfuscated)
+        Log.d("StringObfuscate", "\n=== Method Call Examples ===")
+        val proxyHost = ApiConfig.getSystemProxyHost()
+        val userHome = ApiConfig.getUserHome()
+        Log.d("StringObfuscate", "Proxy Host: $proxyHost")
+        Log.d("StringObfuscate", "User Home: $userHome")
+
+        // Safe version using obfuscated parameters
+        val safeProxyHost = ApiConfig.getObfuscatedProxyHost()
+        Log.d("StringObfuscate", "Safe Proxy Host: $safeProxyHost")
 
         Log.d("StringObfuscate", "Note: Generated code will be in build/generated/ksp/")
     }
