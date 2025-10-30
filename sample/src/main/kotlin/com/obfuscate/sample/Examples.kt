@@ -42,3 +42,17 @@ class AppConfig {
         val apiKey = "nested_api_key_456"
     }
 }
+
+// �o. Works on array/list/set of strings
+@StringObfuscate
+class NetworkConfig {
+    val proxyHosts = arrayOf(
+        "socksProxyHost",
+        "http.proxyHost",
+        "https.proxyHost"
+    )
+
+    val proxyPorts: List<String> = listOf("1080", "3128", "8888")
+
+    val trustedDomains: Set<String> = setOf("localhost", "127.0.0.1", "*.internal")
+}

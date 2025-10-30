@@ -71,9 +71,9 @@ plugins {
 
 dependencies {
     // String Obfuscator
-    implementation("com.github.Ealireza.StringObfuscator:annotation:1.0.0")
-    implementation("com.github.Ealireza.StringObfuscator:runtime:1.0.0")
-    ksp("com.github.Ealireza.StringObfuscator:processor:1.0.0")
+    implementation("com.github.Ealireza.StringObfuscator:stringobfuscator-annotation:v0.0.2")
+    implementation("com.github.Ealireza.StringObfuscator:stringobfuscator-runtime:v0.0.2")
+    ksp("com.github.Ealireza.StringObfuscator:stringobfuscator-processor:v0.0.2")
 }
 ```
 
@@ -301,6 +301,8 @@ Modify the obfuscation to use your own algorithm:
 - [Quick Reference](QUICK_REFERENCE.md) - Cheat sheet
 - [Security Policy](SECURITY.md) - Security considerations
 - [Contributing Guide](CONTRIBUTING.md) - How to contribute
+- Support for string arrays/lists/sets declared with `arrayOf(...)`, `listOf(...)`, or `setOf(...)`
+- Handles triple-quoted literals with `trimIndent()`/`trimMargin()` modifiers
 
 ---
 
@@ -351,6 +353,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 ## 🐛 Issues & Support
 
 Found a bug or have a feature request? [Open an issue](https://github.com/Ealireza/StringObfuscator/issues)
+
+---
+
+## Limitations
+
+- String literals inside method bodies are not automatically rewritten; call the generated obfuscated getters instead of embedding insecure inline strings.
+- Collection handling currently supports simple `arrayOf`, `listOf`, or `setOf` initializers containing string literals (no runtime-generated values or complex expressions).
 
 ---
 
