@@ -22,7 +22,7 @@ object StringDeobfuscator {
      * @return Original string value
      */
     @JvmStatic
-    inline fun deobfuscate(encoded: String, xorKey: Byte): String {
+    fun deobfuscate(encoded: String, xorKey: Byte): String {
         // Base64 decode to byte array
         val bytes = Base64.decode(encoded, Base64.DEFAULT)
 
@@ -39,7 +39,7 @@ object StringDeobfuscator {
      * @return Original string value
      */
     @JvmStatic
-    inline fun deobfuscateFast(encoded: ByteArray, xorKey: Byte): String {
+    fun deobfuscateFast(encoded: ByteArray, xorKey: Byte): String {
         // Create a copy to avoid modifying the original data
         val workingCopy = encoded.copyOf()
         return deobfuscateInPlace(workingCopy, xorKey)
@@ -54,7 +54,7 @@ object StringDeobfuscator {
      * @return Deobfuscated string
      */
     @JvmStatic
-    inline fun deobfuscateInPlace(bytes: ByteArray, xorKey: Byte): String {
+    fun deobfuscateInPlace(bytes: ByteArray, xorKey: Byte): String {
         // Single-pass deobfuscation: reverse shuffle + XOR in one loop
         for (i in bytes.indices) {
             val b = bytes[i].toInt() and 0xFF
@@ -78,7 +78,7 @@ object StringDeobfuscator {
      * @return Original string value
      */
     @JvmStatic
-    inline fun deobfuscateFastBuffered(encoded: ByteArray, xorKey: Byte, buffer: ByteArray): String {
+    fun deobfuscateFastBuffered(encoded: ByteArray, xorKey: Byte, buffer: ByteArray): String {
         require(buffer.size >= encoded.size) { "Buffer too small" }
 
         // Copy to buffer for in-place operations

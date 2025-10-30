@@ -19,17 +19,20 @@ object ApiConfig {
     fun getUserHome(): String? = System.getProperty("user.home")
     fun getJavaVersion(): String = System.getProperty("java.version") ?: "unknown"
 
-    // Or use obfuscated versions:
-    fun getObfuscatedProxyHost(): String? {
-        // Manually obfuscate the parameter
-        return System.getProperty(ApiConfigObfuscated.getProxyHostKey())
-    }
+    // Or use obfuscated versions (requires SystemProperties class):
+    // fun getObfuscatedProxyHost(): String? {
+    //     return System.getProperty(SystemPropertiesObfuscated.getProxyHostKey())
+    // }
 }
 
 // Separate obfuscated class for method call parameters
+// Note: These strings are filtered out by default (system properties)
+// Uncomment if you want to test with custom filtering
+/*
 @StringObfuscate
 object SystemProperties {
     const val PROXY_HOST_KEY = "http.proxyHost"
     const val USER_HOME_KEY = "user.home"
     const val JAVA_VERSION_KEY = "java.version"
 }
+*/
