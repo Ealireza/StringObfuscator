@@ -1,8 +1,8 @@
 # String Obfuscator 🔒
 
 [![JitPack](https://jitpack.io/v/Ealireza/StringObfuscator.svg)](https://jitpack.io/#Ealireza/StringObfuscator)
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.9.22-blue.svg)](https://kotlinlang.org)
-[![KSP](https://img.shields.io/badge/KSP-1.9.22--1.0.17-purple.svg)](https://github.com/google/ksp)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-blue.svg)](https://kotlinlang.org)
+[![KSP](https://img.shields.io/badge/KSP-2.2.21--2.0.4-purple.svg)](https://github.com/google/ksp)
 [![Android](https://img.shields.io/badge/Android-5.0%2B-green.svg)](https://developer.android.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -55,7 +55,7 @@ allprojects {
 **In your root `build.gradle.kts`:**
 ```kotlin
 plugins {
-    id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
+    id("com.google.devtools.ksp") version "2.2.21-2.0.4" apply false
 }
 ```
 
@@ -286,9 +286,10 @@ Modify the obfuscation to use your own algorithm:
 ## 📋 Requirements
 
 - **Kotlin** 1.9.22+
-- **KSP** 1.9.22-1.0.17+
+- **KSP** 2.2.21-2.0.4+
 - **Android Gradle Plugin** 8.2.2+
 - **Min SDK** 21 (Android 5.0)
+- **Target SDK** 35+
 - **Target SDK** 34+
 
 ---

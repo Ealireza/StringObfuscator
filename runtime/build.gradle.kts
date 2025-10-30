@@ -9,11 +9,11 @@ version = "1.0.0"
 
 android {
     namespace = "com.obfuscate.runtime"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
     }
 
     compileOptions {

@@ -20,7 +20,7 @@ dependencyResolutionManagement {
 **Root `build.gradle.kts`:**
 ```kotlin
 plugins {
-    id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
+    id("com.google.devtools.ksp") version "2.2.21-2.0.4" apply false
 }
 ```
 
@@ -31,9 +31,9 @@ plugins {
 }
 
 dependencies {
-    implementation("com.github.Ealireza:annotation:1.0.0")
-    implementation("com.github.Ealireza:runtime:1.0.0")
-    ksp("com.github.Ealireza:processor:1.0.0")
+    implementation("com.github.Ealireza.StringObfuscator:annotation:1.0.0")
+    implementation("com.github.Ealireza.StringObfuscator:runtime:1.0.0")
+    ksp("com.github.Ealireza.StringObfuscator:processor:1.0.0")
 }
 ```
 

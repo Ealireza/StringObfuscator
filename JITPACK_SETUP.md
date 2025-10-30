@@ -117,9 +117,9 @@ dependencyResolutionManagement {
 **`build.gradle.kts`:**
 ```kotlin
 dependencies {
-    implementation("com.github.Ealireza:annotation:1.0.0")
-    implementation("com.github.Ealireza:runtime:1.0.0")
-    ksp("com.github.Ealireza:processor:1.0.0")
+    implementation("com.github.Ealireza.StringObfuscator:annotation:1.0.0")
+    implementation("com.github.Ealireza.StringObfuscator:runtime:1.0.0")
+    ksp("com.github.Ealireza.StringObfuscator:processor:1.0.0")
 }
 ```
 
@@ -129,16 +129,16 @@ JitPack supports multiple version formats:
 
 ```kotlin
 // Specific release version
-implementation("com.github.Ealireza:annotation:1.0.0")
+implementation("com.github.Ealireza.StringObfuscator:annotation:1.0.0")
 
 // Git commit hash (for testing)
-implementation("com.github.Ealireza:annotation:abc1234")
+implementation("com.github.Ealireza.StringObfuscator:annotation:abc1234")
 
 // Branch snapshot (not recommended for production)
-implementation("com.github.Ealireza:annotation:main-SNAPSHOT")
+implementation("com.github.Ealireza.StringObfuscator:annotation:main-SNAPSHOT")
 
 // Latest release
-implementation("com.github.Ealireza:annotation:latest.release")
+implementation("com.github.Ealireza.StringObfuscator:annotation:latest.release")
 ```
 
 ## 🛠️ Testing Locally Before Publishing

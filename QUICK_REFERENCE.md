@@ -5,7 +5,7 @@
 ```kotlin
 // Root build.gradle.kts
 plugins {
-    id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
+    id("com.google.devtools.ksp") version "2.2.21-2.0.4" apply false
 }
 
 // App build.gradle.kts

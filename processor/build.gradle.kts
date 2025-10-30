@@ -9,9 +9,9 @@ version = "1.0.0"
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(project(":annotation"))
-    implementation("com.google.devtools.ksp:symbol-processing-api:1.9.22-1.0.17")
-    implementation("com.squareup:kotlinpoet:1.16.0")
-    implementation("com.squareup:kotlinpoet-ksp:1.16.0")
+    implementation("com.google.devtools.ksp:symbol-processing-api:2.2.21-2.0.4")
+    implementation("com.squareup:kotlinpoet:1.18.1")
+    implementation("com.squareup:kotlinpoet-ksp:1.18.1")
 }
 
 publishing {

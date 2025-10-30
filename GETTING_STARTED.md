@@ -59,7 +59,7 @@ In your app's `build.gradle.kts`:
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("com.google.devtools.ksp") version "1.9.22-1.0.17"
+    id("com.google.devtools.ksp") version "2.2.21-2.0.4"
 }
 
 dependencies {
@@ -214,7 +214,7 @@ Try the included sample app:
 **Solution:** Make sure you have KSP plugin in root `build.gradle.kts`:
 ```kotlin
 plugins {
-    id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
+    id("com.google.devtools.ksp") version "2.2.21-2.0.4" apply false
 }
 ```
 
