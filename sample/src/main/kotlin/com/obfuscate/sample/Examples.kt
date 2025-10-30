@@ -2,12 +2,7 @@ package com.obfuscate.sample
 
 import com.obfuscate.annotation.StringObfuscate
 
-// ✅ Works on OBJECT
-@StringObfuscate
-object ApiConfig {
-    const val API_KEY = "example_api_key_123"
-    const val BASE_URL = "https://api.example.com"
-}
+// ✅ Works on OBJECT - See ApiConfig.kt for example
 
 // ✅ Works on CLASS
 @StringObfuscate

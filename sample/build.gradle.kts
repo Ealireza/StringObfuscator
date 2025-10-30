@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.obfuscate.sample"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.obfuscate.sample"
